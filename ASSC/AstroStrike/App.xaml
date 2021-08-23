@@ -1,0 +1,41 @@
+<Application
+	x:Class="AstroStrike.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:AstroStrike">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Grey.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+			<SolidColorBrush
+				Color="#FF9370F6"
+				x:Key="AccentColor" />
+			<SolidColorBrush
+				Color="#FFFFFFFF"
+				x:Key="BackgroundColor" />
+			<SolidColorBrush
+				Color="#DD000000"
+				x:Key="TextColor" />
+			<SolidColorBrush
+				Color="#FF252836"
+				x:Key="SelectedColor" />
+			<SolidColorBrush
+				Color="#2db84d"
+				x:Key="SuccessColor" />
+			<SolidColorBrush
+				Color="#db3340"
+				x:Key="DangerColor" />
+			<SolidColorBrush
+				Color="#00bcd4"
+				x:Key="InfoColor" />
+			<SolidColorBrush
+				Color="#e9af20"
+				x:Key="WarningColor" />
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

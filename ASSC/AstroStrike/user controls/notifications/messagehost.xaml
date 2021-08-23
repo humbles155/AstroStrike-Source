@@ -1,0 +1,16 @@
+<Window
+	x:Class="AstroStrike.User_Controls.Notifications.MessageHost" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:AstroStrike.User_Controls.Notifications"
+	Title="Astro Strike Messages"
+	Height="902.409"
+	Width="475"
+	AllowsTransparency="True"
+	Topmost="True"
+	ResizeMode="NoResize"
+	WindowStyle="None"
+	ShowInTaskbar="False"
+	Background="{x:Null}"
+	Loaded="Window_Loaded">
+	<StackPanel
+		Name="spNotifications"
+		VerticalAlignment="Bottom" />
+</Window>

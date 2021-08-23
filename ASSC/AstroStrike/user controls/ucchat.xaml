@@ -1,0 +1,923 @@
+<UserControl
+	x:Class="AstroStrike.User_Controls.ucChat" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:AstroStrike.User_Controls" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf">
+	<Grid>
+		<Label
+			Content="Chat Room"
+			HorizontalAlignment="Left"
+			Margin="20,10,0,0"
+			VerticalAlignment="Top"
+			FontWeight="Bold"
+			FontFamily="Segoe UI Semibold"
+			FontSize="26"
+			Width="140"
+			Height="46" />
+		<Grid
+			HorizontalAlignment="Left"
+			Height="518"
+			Margin="0,56,0,0"
+			VerticalAlignment="Top"
+			Width="835">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="621"
+				VerticalAlignment="Top"
+				Width="835">
+				<Border
+					CornerRadius="10"
+					HorizontalAlignment="Left"
+					Height="503"
+					Margin="35,1,0,0"
+					VerticalAlignment="Top"
+					Width="769"
+					Background="#FF1F1D2B">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="503"
+						VerticalAlignment="Top"
+						Width="769">
+						<Border
+							BorderBrush="#FF252836"
+							CornerRadius="5"
+							BorderThickness="1"
+							HorizontalAlignment="Left"
+							Height="48"
+							Margin="10,10,0,0"
+							VerticalAlignment="Top"
+							Width="54"
+							Background="#FF252836"
+							Opacity="0.8">
+							<iconPacks:PackIconBootstrapIcons
+								Height="28"
+								Width="34"
+								Kind="ChatText"
+								Foreground="{DynamicResource AccentColor}"
+								Margin="9,9,0,0" />
+						</Border>
+						<Border
+							BorderBrush="#FF252836"
+							CornerRadius="5"
+							BorderThickness="1"
+							HorizontalAlignment="Left"
+							Height="483"
+							Margin="69,10,0,0"
+							VerticalAlignment="Top"
+							Width="690"
+							Background="#FF252836"
+							Opacity="0.8">
+							<Grid
+								HorizontalAlignment="Left"
+								Height="483"
+								Margin="-1"
+								VerticalAlignment="Top"
+								Width="690">
+								<Button
+									Name="SendMSG"
+									materialDesign:ButtonAssist.CornerRadius="5"
+									ToolTip="Send Message"
+									HorizontalAlignment="Left"
+									Margin="615,436,0,0"
+									VerticalAlignment="Top"
+									Width="65"
+									Background="#FF1F1D2B"
+									BorderBrush="{DynamicResource AccentColor}"
+									Foreground="#FFFFFFFF"
+									Height="37"
+									Content="{iconPacks:BootstrapIcons Kind=ArrowRight}"
+									Click="SendMSG_Click" />
+								<Button
+									Name="btnEmoji"
+									materialDesign:ButtonAssist.CornerRadius="5"
+									ToolTip="Emoji"
+									HorizontalAlignment="Left"
+									Margin="545,436,0,0"
+									VerticalAlignment="Top"
+									Width="65"
+									Background="#FF1F1D2B"
+									BorderBrush="{DynamicResource AccentColor}"
+									Foreground="#FFFFFFFF"
+									Height="37"
+									Content="{iconPacks:BootstrapIcons Kind=EmojiHeartEyes}"
+									Click="btnEmoji_Click" />
+								<emoji:TextBlock
+									Name="tbText"
+									HorizontalAlignment="Left"
+									Margin="10,436,0,11"
+									TextWrapping="Wrap"
+									VerticalAlignment="Center"
+									Height="36"
+									Width="530"
+									Foreground="#FFFFFFFF"
+									FontSize="22" />
+								<TextBox
+									Name="tbMessage"
+									HorizontalAlignment="Left"
+									Height="35"
+									Width="530"
+									Margin="10,436,0,0"
+									TextWrapping="Wrap"
+									VerticalAlignment="Top"
+									FontSize="22"
+									Foreground="#FFFFFFFF"
+									BorderThickness="0"
+									Opacity="0"
+									CaretBrush="{x:Null}"
+									TextChanged="tbMessage_TextChanged"
+									KeyDown="tbMessage_KeyDown" />
+								<ScrollViewer
+									Name="scrollviwer"
+									VerticalScrollBarVisibility="Auto"
+									Margin="10,0,10,52"
+									Height="421"
+									VerticalAlignment="Top"
+									IsEnabled="True">
+									<StackPanel
+										Name="spMessages"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Bottom"
+										Width="670"
+										Height="421" />
+								</ScrollViewer>
+								<Grid
+									Name="PeepsEmojiPicker"
+									HorizontalAlignment="Left"
+									Margin="463,321,0,0"
+									VerticalAlignment="Top"
+									Width="217"
+									Height="110"
+									Background="#FF1F1D2B"
+									Visibility="Hidden">
+									<Grid
+										HorizontalAlignment="Left"
+										Height="110"
+										VerticalAlignment="Top"
+										Width="217">
+										<Grid
+											Name="girdEmojiHeader"
+											HorizontalAlignment="Left"
+											Height="32"
+											VerticalAlignment="Top"
+											Width="217"
+											Background="{DynamicResource AccentColor}"
+											Opacity="0.7">
+											<Button
+												Name="btnSmile"
+												Content="😃"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Top"
+												Width="50"
+												Foreground="#FFFFFFFF"
+												Background="{x:Null}"
+												BorderBrush="{x:Null}"
+												Click="btnSmile_Click" />
+											<Button
+												Name="btnHeart"
+												Content="❤️"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Top"
+												Width="50"
+												Foreground="#FFFFFFFF"
+												Margin="55,0,0,0"
+												Background="{x:Null}"
+												BorderBrush="{x:Null}"
+												Click="btnHeart_Click" />
+											<Button
+												Name="btnBeef"
+												Content="🤡"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Top"
+												Width="50"
+												Foreground="#FFFFFFFF"
+												Margin="112,0,0,0"
+												Background="{x:Null}"
+												BorderBrush="{x:Null}"
+												Click="btnBeef_Click" />
+											<Button
+												Name="btnMisc"
+												Content="✨"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Top"
+												Width="50"
+												Foreground="#FFFFFFFF"
+												Margin="167,0,0,0"
+												Background="{x:Null}"
+												BorderBrush="{x:Null}"
+												Click="btnMisc_Click" />
+										</Grid>
+										<Grid
+											Name="gridSmile"
+											HorizontalAlignment="Left"
+											Height="69"
+											Margin="4,37,0,0"
+											VerticalAlignment="Top"
+											Width="209">
+											<emoji:TextBlock
+												Name="emojiSmile"
+												ToolTip="Smile"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😀"
+												Margin="9,8,0,0"
+												FontSize="16"
+												MouseDown="emojiSmile_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiXD"
+												ToolTip="XD"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😆"
+												Margin="37,8,0,0"
+												FontSize="16"
+												MouseDown="emojiXD_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiSweat"
+												ToolTip="Sweat"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😅"
+												Margin="65,8,0,0"
+												FontSize="16"
+												MouseDown="emojiSweat_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiTrive"
+												ToolTip="Trive"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😂"
+												Margin="93,8,0,0"
+												FontSize="16"
+												MouseDown="emojiTrive_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiTongue"
+												ToolTip="Tongue"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😋"
+												Margin="121,8,0,0"
+												FontSize="16"
+												MouseDown="emojiTongue_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiFuji"
+												ToolTip="Fuji"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😎"
+												Margin="149,8,0,0"
+												FontSize="16"
+												MouseDown="emojiFuji_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiParty"
+												ToolTip="Party"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🥳"
+												Margin="177,8,0,0"
+												FontSize="16"
+												MouseDown="emojiParty_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiWorried"
+												ToolTip="Worried"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😰"
+												Margin="9,35,0,0"
+												FontSize="16"
+												MouseDown="emojiWorried_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiOhDaDdY"
+												ToolTip="Oh DaDdY"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😩"
+												Margin="37,35,0,0"
+												FontSize="16"
+												MouseDown="emojiOhDaDdY_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiMemes"
+												ToolTip="TriveV2"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🤣"
+												Margin="65,35,0,0"
+												FontSize="16"
+												MouseDown="emojiMemes_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiPeep"
+												ToolTip="Peep"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😈"
+												Margin="93,35,0,0"
+												FontSize="16"
+												MouseDown="emojiDevil_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiFxck"
+												ToolTip="Fxck"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🤬"
+												Margin="121,35,0,0"
+												FontSize="16"
+												MouseDown="emojiFxck_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiMiddleFinger"
+												ToolTip="Middle Finger"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🖕"
+												Margin="152,35,0,0"
+												FontSize="16"
+												MouseDown="emojiMiddleFinger_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiOK"
+												ToolTip="OK"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="👌"
+												Margin="180,35,0,0"
+												FontSize="16"
+												MouseDown="emojiOK_MouseDown" />
+										</Grid>
+										<Grid
+											Name="gridHeart"
+											HorizontalAlignment="Left"
+											Height="69"
+											Margin="4,37,0,0"
+											VerticalAlignment="Top"
+											Width="209"
+											Visibility="Hidden">
+											<emoji:TextBlock
+												Name="emojiGreenHeart"
+												ToolTip="Green Heart"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💚"
+												Margin="9,8,0,0"
+												FontSize="16"
+												MouseDown="emojiGreenHeart_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiSparkleHeart"
+												ToolTip="Sparkle Heart"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💖"
+												Margin="37,8,0,0"
+												FontSize="16"
+												MouseDown="emojiSparkleHeart_MouseDown" />
+											<emoji:TextBlock
+												Name="emoji2Hearts"
+												ToolTip="Hearts"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💕"
+												Margin="65,8,0,0"
+												FontSize="16"
+												MouseDown="emoji2Hearts_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiBeatingHeart"
+												ToolTip="Beating Heart"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💓"
+												Margin="93,8,0,0"
+												FontSize="16"
+												MouseDown="emojiBeatingHeart_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiKiss"
+												ToolTip="Kiss"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="😘"
+												Margin="121,8,0,0"
+												FontSize="16"
+												MouseDown="emojiKiss_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiBrokenHeart"
+												ToolTip="Broken Heart"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💔"
+												Margin="149,8,0,0"
+												FontSize="16"
+												MouseDown="emojiBrokenHeart_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiLove"
+												ToolTip="Love"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🥰"
+												Margin="177,8,0,0"
+												FontSize="16"
+												MouseDown="emojiLove_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiLips"
+												ToolTip="Lips"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💋"
+												Margin="9,35,0,0"
+												FontSize="16"
+												MouseDown="emojiLips_MouseDown" />
+											<emoji:TextBlock
+												Name="EmojiRose"
+												ToolTip="Rose"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🌹"
+												Margin="41,35,0,0"
+												FontSize="16"
+												MouseDown="EmojiRose_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiDeadRose"
+												ToolTip="Limp Rose"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🥀"
+												Margin="65,35,0,0"
+												FontSize="16"
+												MouseDown="emojiDeadRose_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiRibbon"
+												ToolTip="Ribbon"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🎀"
+												Margin="93,35,0,0"
+												FontSize="16"
+												MouseDown="emojiRibbon_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiBlueHeart"
+												ToolTip="Blue Heart"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💙"
+												Margin="121,35,0,0"
+												FontSize="16"
+												MouseDown="emojiBlueHeart_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiPurpleHeart"
+												ToolTip="Purple Heart"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💜"
+												Margin="149,35,0,0"
+												FontSize="16"
+												MouseDown="emojiPurpleHeart_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiBlackHeart"
+												ToolTip="Black Heart"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🖤"
+												Margin="177,35,0,0"
+												FontSize="16"
+												MouseDown="emojiBlackHeart_MouseDown" />
+										</Grid>
+										<Grid
+											Name="gridBeef"
+											HorizontalAlignment="Left"
+											Height="69"
+											Margin="4,37,0,0"
+											VerticalAlignment="Top"
+											Width="209"
+											Visibility="Hidden">
+											<emoji:TextBlock
+												Name="emojiClown"
+												ToolTip="SafeGuardAuth"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🤡"
+												Margin="9,8,0,0"
+												FontSize="16"
+												MouseDown="emojiClown_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiMonkey1"
+												ToolTip="Monkey Face"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🙈"
+												Margin="37,8,0,0"
+												FontSize="16"
+												MouseDown="emojiMonkey1_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiMonkey2"
+												ToolTip="Monkey"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🐒"
+												Margin="65,8,0,0"
+												FontSize="16"
+												MouseDown="emojiMonkey2_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiCat"
+												ToolTip="Cat"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🐱"
+												Margin="93,8,0,0"
+												FontSize="16"
+												MouseDown="emojiCat_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiFire"
+												ToolTip="Fire"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🔥"
+												Margin="123,8,0,0"
+												FontSize="16"
+												MouseDown="emojiFire_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiSleep"
+												ToolTip="Sleep"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💤"
+												Margin="149,8,0,0"
+												FontSize="16"
+												MouseDown="emojiSleep_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiEyes"
+												ToolTip="Eyes"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="👀"
+												Margin="177,6,0,0"
+												FontSize="16"
+												MouseDown="emojiEyes_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiDead"
+												ToolTip="Dead"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💀"
+												Margin="10,35,0,0"
+												FontSize="16"
+												MouseDown="emojiDead_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiPlug"
+												ToolTip="The Plug"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🔌"
+												Margin="38,35,0,0"
+												FontSize="16"
+												MouseDown="emojiPlug_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiGem"
+												ToolTip="Gem"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💎"
+												Margin="66,35,0,0"
+												FontSize="16"
+												MouseDown="emojiGem_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiControl"
+												ToolTip="Shitbox Remote"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🎮"
+												Margin="93,35,0,0"
+												FontSize="16"
+												MouseDown="emojiControl_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiClap"
+												ToolTip="Clapped"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="👏"
+												Margin="121,35,0,0"
+												FontSize="16"
+												MouseDown="emojiClap_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiGreenBoi"
+												ToolTip="Green Boi"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="👽"
+												Margin="151,35,0,0"
+												FontSize="16"
+												MouseDown="emojiGreenBoi_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiCoonGang"
+												ToolTip="Coon Gang"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🦝"
+												Margin="177,35,0,0"
+												FontSize="16"
+												MouseDown="emojiCoonGang_MouseDown" />
+										</Grid>
+										<Grid
+											Name="gridMisc"
+											HorizontalAlignment="Left"
+											Height="69"
+											Margin="4,37,0,0"
+											VerticalAlignment="Top"
+											Width="209"
+											Visibility="Hidden">
+											<emoji:TextBlock
+												Name="emojiPartyPopper"
+												ToolTip="Party Popper"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🎉"
+												Margin="10,8,0,0"
+												FontSize="16"
+												MouseDown="emojiPartyPopper_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiGift"
+												ToolTip="Gift"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🎁"
+												Margin="38,8,0,0"
+												FontSize="16"
+												MouseDown="emojiGift_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiMoney"
+												ToolTip="Money"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💸"
+												Margin="66,8,0,0"
+												FontSize="16"
+												MouseDown="emojiMoney_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiSmoke"
+												ToolTip="Smoke"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💨"
+												Margin="93,8,0,0"
+												FontSize="16"
+												MouseDown="emojiSmoke_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiPill"
+												ToolTip="GoGo Capsule (FOR PEEP)"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💊"
+												Margin="121,8,0,0"
+												FontSize="16"
+												MouseDown="emojiPill_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiHerb"
+												ToolTip="Herb"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🌿"
+												Margin="149,8,0,0"
+												FontSize="16"
+												MouseDown="emojiHerb_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiBomb"
+												ToolTip="Bomb"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💣"
+												Margin="177,8,0,0"
+												FontSize="16"
+												MouseDown="emojiBomb_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiShield"
+												ToolTip="Shield"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🛡️"
+												Margin="11,35,0,0"
+												FontSize="16"
+												MouseDown="emojiShield_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiPin"
+												ToolTip="Pin"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="📌"
+												Margin="37,35,0,0"
+												FontSize="16"
+												MouseDown="emojiPin_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiBrain"
+												ToolTip="Big Brain"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🧠"
+												Margin="65,35,0,0"
+												FontSize="16"
+												MouseDown="emojiBrain_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiWet"
+												ToolTip="Moist"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="💦"
+												Margin="94,35,0,0"
+												FontSize="16"
+												MouseDown="emojiWet_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiOrangeBoi"
+												ToolTip="Orange Boi"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🦧"
+												Margin="123,35,0,0"
+												FontSize="16"
+												MouseDown="emojiOrangeBoi_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiCorona"
+												ToolTip="Corona"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🦠"
+												Margin="149,35,0,0"
+												FontSize="16"
+												MouseDown="emojiCorona_MouseDown" />
+											<emoji:TextBlock
+												Name="emojiEagle"
+												ToolTip="Eagle"
+												HorizontalAlignment="Left"
+												Height="22"
+												VerticalAlignment="Top"
+												Width="23"
+												Foreground="#FFFFFFFF"
+												Text="🦅"
+												Margin="177,34,0,0"
+												FontSize="16"
+												RenderTransformOrigin="0.489,0.409"
+												MouseDown="emojiEagle_MouseDown" />
+										</Grid>
+									</Grid>
+								</Grid>
+							</Grid>
+						</Border>
+					</Grid>
+				</Border>
+			</Grid>
+		</Grid>
+	</Grid>
+</UserControl>

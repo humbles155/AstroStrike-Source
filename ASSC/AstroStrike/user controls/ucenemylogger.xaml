@@ -1,0 +1,366 @@
+<UserControl
+	x:Class="AstroStrike.User_Controls.ucEnemyLogger" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:AstroStrike.User_Controls" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+	<Grid>
+		<Label
+			Content="Enemy Logger"
+			HorizontalAlignment="Left"
+			Margin="20,10,0,0"
+			VerticalAlignment="Top"
+			FontWeight="Bold"
+			FontFamily="Segoe UI Semibold"
+			FontSize="26"
+			Width="186"
+			Height="46" />
+		<Grid
+			HorizontalAlignment="Left"
+			Height="518"
+			Margin="0,56,0,0"
+			VerticalAlignment="Top"
+			Width="835">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="621"
+				VerticalAlignment="Top"
+				Width="835">
+				<Border
+					CornerRadius="10"
+					HorizontalAlignment="Left"
+					Height="263"
+					Margin="35,1,0,0"
+					VerticalAlignment="Top"
+					Width="769"
+					Background="#FF1F1D2B">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="263"
+						VerticalAlignment="Top"
+						Width="769">
+						<Border
+							BorderBrush="#FF252836"
+							CornerRadius="5"
+							BorderThickness="1"
+							HorizontalAlignment="Left"
+							Height="48"
+							Margin="10,10,0,0"
+							VerticalAlignment="Top"
+							Width="54"
+							Background="#FF252836"
+							Opacity="0.8">
+							<iconPacks:PackIconBootstrapIcons
+								Height="28"
+								Width="34"
+								Kind="PersonBadge"
+								Foreground="{DynamicResource AccentColor}"
+								Margin="9,9,0,0" />
+						</Border>
+						<Border
+							BorderBrush="#FF252836"
+							CornerRadius="5"
+							BorderThickness="1"
+							HorizontalAlignment="Left"
+							Height="243"
+							Margin="69,10,0,0"
+							VerticalAlignment="Top"
+							Width="690"
+							Background="#FF252836"
+							Opacity="0.8">
+							<Grid
+								HorizontalAlignment="Left"
+								Height="243"
+								Margin="-1"
+								VerticalAlignment="Top"
+								Width="690">
+								<Label
+									HorizontalContentAlignment="Center"
+									Content="Add New Enemy"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Top"
+									FontWeight="Bold"
+									FontFamily="Segoe UI Semibold"
+									FontSize="18"
+									Width="690"
+									Height="35" />
+								<Button
+									Name="AddUserBTN"
+									Content="Add Enemy"
+									materialDesign:ButtonAssist.CornerRadius="5"
+									HorizontalAlignment="Left"
+									Margin="10,204,0,0"
+									VerticalAlignment="Top"
+									Width="670"
+									Background="#FF1F1D2B"
+									BorderBrush="{DynamicResource AccentColor}"
+									Foreground="#FFFFFFFF"
+									Height="35"
+									Click="AddUserBTN_Click" />
+								<ComboBox
+									Name="type"
+									HorizontalContentAlignment="Center"
+									VerticalContentAlignment="Center"
+									materialDesign:HintAssist.Hint="type"
+									HorizontalAlignment="Left"
+									Margin="10,159,0,0"
+									VerticalAlignment="Top"
+									Width="670"
+									Height="38"
+									Foreground="{DynamicResource AccentColor}"
+									FontSize="20"
+									FontWeight="Bold"
+									BorderBrush="#DD858585">
+									<ComboBoxItem
+										Content="Playstation" />
+									<ComboBoxItem
+										Content="Xbox" />
+									<ComboBoxItem
+										Content="PC" />
+									<ComboBoxItem
+										Content="Game Server" />
+									<ComboBoxItem
+										Content="Server" />
+									<ComboBoxItem
+										Content="Discord" />
+									<ComboBoxItem
+										Content="Social Media" />
+									<ComboBoxItem
+										Content="Other" />
+								</ComboBox>
+								<TextBox
+									Name="username"
+									HorizontalContentAlignment="Center"
+									VerticalContentAlignment="Center"
+									materialDesign:HintAssist.Hint="Username"
+									Style="{DynamicResource MaterialDesignTextBox}"
+									Foreground="{DynamicResource AccentColor}"
+									Margin="10,35,10,169"
+									BorderBrush="#DD858585"
+									FontSize="20"
+									FontWeight="Bold"
+									SelectionBrush="#FFC1C1C1"
+									Background="{x:Null}" />
+								<TextBox
+									Name="host"
+									HorizontalContentAlignment="Center"
+									VerticalContentAlignment="Center"
+									materialDesign:HintAssist.Hint="Host"
+									Style="{DynamicResource MaterialDesignTextBox}"
+									Foreground="{DynamicResource AccentColor}"
+									Margin="10,75,354,129"
+									BorderBrush="#DD858585"
+									FontSize="20"
+									FontWeight="Bold"
+									SelectionBrush="#FFC1C1C1"
+									Background="{x:Null}" />
+								<TextBox
+									Name="port"
+									HorizontalContentAlignment="Center"
+									VerticalContentAlignment="Center"
+									materialDesign:HintAssist.Hint="Port"
+									Style="{DynamicResource MaterialDesignTextBox}"
+									Foreground="{DynamicResource AccentColor}"
+									Margin="357,75,10,129"
+									BorderBrush="#DD858585"
+									FontSize="20"
+									FontWeight="Bold"
+									SelectionBrush="#FFC1C1C1"
+									Background="{x:Null}" />
+								<TextBox
+									Name="reason"
+									HorizontalContentAlignment="Center"
+									VerticalContentAlignment="Center"
+									materialDesign:HintAssist.Hint="Reason"
+									Style="{DynamicResource MaterialDesignTextBox}"
+									Foreground="{DynamicResource AccentColor}"
+									Margin="10,116,10,89"
+									BorderBrush="#DD858585"
+									FontSize="20"
+									FontWeight="Bold"
+									SelectionBrush="#FFC1C1C1"
+									Background="{x:Null}" />
+							</Grid>
+						</Border>
+					</Grid>
+				</Border>
+				<Border
+					CornerRadius="10"
+					HorizontalAlignment="Left"
+					Height="227"
+					Margin="35,269,0,0"
+					VerticalAlignment="Top"
+					Width="769"
+					Background="#FF1F1D2B">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="227"
+						VerticalAlignment="Top"
+						Width="769">
+						<Border
+							BorderBrush="#FF252836"
+							CornerRadius="5"
+							BorderThickness="1"
+							HorizontalAlignment="Left"
+							Height="48"
+							Margin="10,10,0,0"
+							VerticalAlignment="Top"
+							Width="54"
+							Background="#FF252836"
+							Opacity="0.8">
+							<iconPacks:PackIconBootstrapIcons
+								Height="28"
+								Width="34"
+								Kind="CardList"
+								Foreground="{DynamicResource AccentColor}"
+								Margin="9,9,0,0" />
+						</Border>
+						<Border
+							BorderBrush="#FF252836"
+							ToolTip="Amount of users stored"
+							CornerRadius="5"
+							BorderThickness="1"
+							HorizontalAlignment="Left"
+							Height="33"
+							Margin="10,63,0,0"
+							VerticalAlignment="Top"
+							Width="54"
+							Background="#FF252836"
+							Opacity="0.8">
+							<Label
+								Name="countLBL"
+								Content="0"
+								ToolTip="Amount of users stored"
+								HorizontalContentAlignment="Center"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Top"
+								FontWeight="Bold"
+								FontFamily="Segoe UI Semibold"
+								FontSize="17"
+								Width="52"
+								Height="32"
+								Foreground="#FFA2A2BD" />
+						</Border>
+						<Border
+							BorderBrush="#FF252836"
+							CornerRadius="5"
+							BorderThickness="1"
+							HorizontalAlignment="Left"
+							Height="207"
+							Margin="69,10,0,0"
+							VerticalAlignment="Top"
+							Width="690"
+							Background="#FF252836"
+							Opacity="0.8">
+							<Grid
+								HorizontalAlignment="Left"
+								Height="207"
+								Margin="-1"
+								VerticalAlignment="Top"
+								Width="690">
+								<DataGrid
+									Name="dgAttackHub"
+									Background="#FF252836"
+									ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+									ScrollViewer.VerticalScrollBarVisibility="Hidden"
+									ScrollViewer.CanContentScroll="True"
+									CanUserSortColumns="False"
+									CanUserReorderColumns="False"
+									CanUserResizeRows="False"
+									Foreground="{DynamicResource AccentColor}"
+									Margin="10">
+									<DataGrid.Columns>
+										<DataGridTextColumn
+											Header="Username"
+											Width="100"
+											Binding="{Binding Username, Mode=OneWay}"
+											ClipboardContentBinding="{x:Null}" />
+										<DataGridTextColumn
+											Header="Host"
+											Width="100"
+											Binding="{Binding Host, Mode=OneWay}"
+											ClipboardContentBinding="{x:Null}" />
+										<DataGridTextColumn
+											Header="Port"
+											Width="100"
+											Binding="{Binding Port, Mode=OneWay}"
+											ClipboardContentBinding="{x:Null}" />
+										<DataGridTextColumn
+											Header="Type"
+											Width="130"
+											Binding="{Binding Type, Mode=OneWay}"
+											ClipboardContentBinding="{x:Null}" />
+										<DataGridTextColumn
+											Width="0"
+											Binding="{Binding Id, Mode=OneWay}"
+											ClipboardContentBinding="{x:Null}" />
+										<DataGridTemplateColumn
+											Header="Options"
+											Width="358"
+											ClipboardContentBinding="{x:Null}">
+											<DataGridTemplateColumn.CellTemplate>
+												<DataTemplate>
+													<StackPanel
+														Orientation="Horizontal">
+														<!--Unknown connection ID: 9-->
+														<Button
+															Name="btnMore"
+															ToolTip="View More"
+															HorizontalAlignment="Left"
+															VerticalAlignment="Top"
+															Background="{DynamicResource AccentColor}"
+															Foreground="#FFFFFFFF"
+															BorderBrush="{x:Null}">
+															<materialDesign:PackIcon
+																Kind="UserDetails"
+																RenderTransformOrigin="0.506,-0.002" />
+														</Button>
+														<!--Unknown connection ID: 10-->
+														<Button
+															Name="btnDelete"
+															ToolTip="Delete Enemy"
+															HorizontalAlignment="Left"
+															VerticalAlignment="Top"
+															Background="{DynamicResource AccentColor}"
+															Foreground="#FFFFFFFF"
+															BorderBrush="{x:Null}">
+															<materialDesign:PackIcon
+																Kind="Delete"
+																RenderTransformOrigin="0.506,-0.002" />
+														</Button>
+														<!--Unknown connection ID: 11-->
+														<Button
+															Name="btnCopy"
+															ToolTip="Copy Info"
+															HorizontalAlignment="Left"
+															VerticalAlignment="Top"
+															Background="{DynamicResource AccentColor}"
+															Foreground="#FFFFFFFF"
+															BorderBrush="{x:Null}">
+															<materialDesign:PackIcon
+																Kind="ContentCopy"
+																RenderTransformOrigin="0.506,-0.002" />
+														</Button>
+													</StackPanel>
+												</DataTemplate>
+											</DataGridTemplateColumn.CellTemplate>
+										</DataGridTemplateColumn>
+									</DataGrid.Columns>
+								</DataGrid>
+							</Grid>
+						</Border>
+						<Button
+							Name="ClearAllBTN"
+							ToolTip="Clear logs"
+							HorizontalAlignment="Left"
+							Margin="10,102,0,0"
+							VerticalAlignment="Top"
+							Width="54"
+							Background="#FF252836"
+							BorderBrush="#FF252836"
+							Foreground="#FFA2A2BD"
+							Opacity="0.8"
+							Content="{iconPacks:BootstrapIcons Kind=Trash}"
+							Click="ClearAllBTN_Click" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Grid>
+	</Grid>
+</UserControl>

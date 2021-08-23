@@ -1,0 +1,697 @@
+<UserControl
+	x:Class="AstroStrike.User_Controls.ucSettings" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:AstroStrike.User_Controls" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+	<Grid>
+		<Label
+			Content="Settings"
+			HorizontalAlignment="Left"
+			Margin="20,10,0,0"
+			VerticalAlignment="Top"
+			FontWeight="Bold"
+			FontFamily="Segoe UI Semibold"
+			FontSize="26"
+			Width="140"
+			Height="46" />
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="229"
+			Margin="564,61,0,0"
+			VerticalAlignment="Top"
+			Width="240"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="229"
+				VerticalAlignment="Top"
+				Width="240">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="212"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="220"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="212"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="220">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Expire Date"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="220"
+							Height="35" />
+						<Label
+							Name="exdate"
+							HorizontalContentAlignment="Center"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontSize="18"
+							Width="220"
+							Height="35"
+							Margin="0,35,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="User ID"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="220"
+							Height="35"
+							Margin="0,70,0,0" />
+						<Label
+							Name="userid"
+							HorizontalContentAlignment="Center"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontSize="20"
+							Width="220"
+							Height="35"
+							Margin="0,105,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Level"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="220"
+							Height="35"
+							Margin="0,140,0,0" />
+						<Label
+							Name="level"
+							HorizontalContentAlignment="Center"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontSize="20"
+							Width="220"
+							Height="35"
+							Margin="0,175,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+		<Border
+			Name="bProfileSettings"
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="271"
+			Margin="35,61,0,0"
+			VerticalAlignment="Top"
+			Width="524"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="271"
+				VerticalAlignment="Top"
+				Width="524">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="PersonBoundingBox"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="251"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="445"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="251"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="445">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Profile Settings"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="445"
+							Height="35" />
+						<Ellipse
+							Margin="16,53,360,130"
+							materialDesign:ShadowAssist.ShadowDepth="Depth3"
+							StrokeThickness="3"
+							Stroke="{DynamicResource AccentColor}">
+							<Shape.Fill>
+								<ImageBrush
+									ImageSource="/AstroStrike;component/test.png"
+									x:Name="pic"
+									Stretch="UniformToFill" />
+							</Shape.Fill>
+						</Ellipse>
+						<Label
+							Name="username"
+							Content="Username"
+							HorizontalAlignment="Left"
+							Margin="92,53,0,0"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="18"
+							Width="264" />
+						<Button
+							Name="ChnagePFP"
+							Content="Change PFP"
+							HorizontalAlignment="Left"
+							Margin="92,87,0,0"
+							VerticalAlignment="Top"
+							Width="108"
+							Foreground="#FFFFFFFF"
+							BorderBrush="{DynamicResource AccentColor}"
+							Background="#FF1F1D2B"
+							Click="ChnagePFP_Click" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Auto Login"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="111"
+							Height="35"
+							Margin="17,163,0,0" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Discord Status"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="152"
+							Height="35"
+							Margin="17,197,0,0" />
+						<ToggleButton
+							Name="AutoLoginSwitch"
+							Background="{DynamicResource AccentColor}"
+							Margin="366,163,21,52"
+							BorderBrush="{DynamicResource AccentColor}"
+							Foreground="{DynamicResource AccentColor}"
+							Click="AutoLoginSwitch_Click" />
+						<ToggleButton
+							Name="RPCswitch"
+							Background="{DynamicResource AccentColor}"
+							Margin="366,197,21,18"
+							BorderBrush="{DynamicResource AccentColor}"
+							Foreground="{DynamicResource AccentColor}"
+							Click="RPCswitch_Click" />
+						<Button
+							Content="Logout"
+							HorizontalAlignment="Left"
+							Visibility="Hidden"
+							Margin="16,192,0,0"
+							VerticalAlignment="Top"
+							Width="405"
+							Foreground="#FFFFFFFF"
+							BorderBrush="{DynamicResource AccentColor}"
+							Background="#FF1F1D2B"
+							Height="41" />
+					</Grid>
+				</Border>
+				<Button
+					Name="btnPwReset"
+					ToolTip="Change Password"
+					HorizontalAlignment="Left"
+					Margin="10,63,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:BootstrapIcons Kind=Lock}"
+					Click="btnPwReset_Click" />
+			</Grid>
+		</Border>
+		<Border
+			Name="bPwReset"
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="271"
+			Margin="35,61,0,0"
+			VerticalAlignment="Top"
+			Width="524"
+			Background="#FF1F1D2B"
+			Visibility="Hidden">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="271"
+				VerticalAlignment="Top"
+				Width="524">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="ShieldLock"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="251"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="445"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="251"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="445">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Password Reset"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="445"
+							Height="35" />
+						<Button
+							Name="UpdatePassBTN"
+							Content="Update Password"
+							HorizontalAlignment="Left"
+							Margin="16,177,0,0"
+							VerticalAlignment="Top"
+							Width="405"
+							Foreground="#FFFFFFFF"
+							BorderBrush="{DynamicResource AccentColor}"
+							Background="#FF1F1D2B"
+							Height="52"
+							Click="UpdatePassBTN_Click" />
+						<TextBox
+							Name="current"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="Current password"
+							ToolTip="host"
+							Style="{DynamicResource MaterialDesignTextBox}"
+							Foreground="{DynamicResource AccentColor}"
+							Margin="16,36,24,179"
+							BorderBrush="#DD858585"
+							FontSize="20"
+							FontWeight="Bold"
+							SelectionBrush="#FFC1C1C1"
+							Background="{x:Null}" />
+						<TextBox
+							Name="_new"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="New password"
+							ToolTip="host"
+							Style="{DynamicResource MaterialDesignTextBox}"
+							Foreground="{DynamicResource AccentColor}"
+							Margin="16,83,24,132"
+							BorderBrush="#DD858585"
+							FontSize="20"
+							FontWeight="Bold"
+							SelectionBrush="#FFC1C1C1"
+							Background="{x:Null}" />
+						<TextBox
+							Name="newagain"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="Confirm password"
+							ToolTip="host"
+							Style="{DynamicResource MaterialDesignTextBox}"
+							Foreground="{DynamicResource AccentColor}"
+							Margin="16,129,24,86"
+							BorderBrush="#DD858585"
+							FontSize="20"
+							FontWeight="Bold"
+							SelectionBrush="#FFC1C1C1"
+							Background="{x:Null}" />
+					</Grid>
+				</Border>
+				<Button
+					Name="btnBack"
+					ToolTip="Back"
+					HorizontalAlignment="Left"
+					Margin="10,63,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:BootstrapIcons Kind=ArrowLeft}"
+					Click="btnBack_Click" />
+			</Grid>
+		</Border>
+		<Border
+			Name="bColors"
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="227"
+			Margin="35,337,0,0"
+			VerticalAlignment="Top"
+			Width="769"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="227"
+				VerticalAlignment="Top"
+				Width="769">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="BrushFill"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="201"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="690"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="201"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="690">
+						<Button
+							Name="ApplyColor"
+							Content="Apply Accent"
+							HorizontalAlignment="Left"
+							Margin="48,46,0,0"
+							VerticalAlignment="Top"
+							Width="124"
+							Foreground="#FFFFFFFF"
+							BorderBrush="{DynamicResource AccentColor}"
+							Background="#FF252836"
+							Height="30"
+							Click="ApplyColor_Click" />
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Theme Settings | Primary Color"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="690"
+							Height="35"
+							Grid.ColumnSpan="2" />
+						<materialDesign:ColorPicker
+							Name="colorPicker"
+							Margin="10,79,10,5"
+							Grid.ColumnSpan="2"
+							MouseMove="colorPicker_MouseMove" />
+						<materialDesign:ColorZone
+							Name="colorZone"
+							Height="26"
+							Width="26"
+							HorizontalAlignment="Left"
+							Background="{DynamicResource AccentColor}"
+							CornerRadius="5"
+							Margin="10,48,0,0"
+							Foreground="#DDFFFFFF" />
+						<Button
+							Name="RestartALl"
+							Content="Change to Default"
+							HorizontalAlignment="Left"
+							Margin="532,46,0,0"
+							VerticalAlignment="Top"
+							Width="147"
+							Foreground="#FFFFFFFF"
+							BorderBrush="{DynamicResource AccentColor}"
+							Background="#FF252836"
+							Height="30"
+							Click="RestartALl_Click" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+		<Border
+			Name="bImg"
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="227"
+			Margin="35,337,0,0"
+			VerticalAlignment="Top"
+			Width="769"
+			Background="#FF1F1D2B"
+			Visibility="Hidden">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="227"
+				VerticalAlignment="Top"
+				Width="769">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="Image"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="201"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="690"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="201"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="690">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Theme Settings | Background Settings"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="690"
+							Height="35" />
+						<Button
+							BorderThickness="3"
+							ToolTip="Preset Background 1"
+							Content="1"
+							HorizontalAlignment="Left"
+							Margin="14,69,0,0"
+							VerticalAlignment="Top"
+							Width="104"
+							Height="57"
+							Foreground="#DDFFFFFF"
+							Background="{x:Null}" />
+						<Button
+							BorderThickness="3"
+							ToolTip="Preset Background 1"
+							Content="2"
+							HorizontalAlignment="Left"
+							Margin="123,69,0,0"
+							VerticalAlignment="Top"
+							Width="104"
+							Height="57"
+							Foreground="#DDFFFFFF"
+							Background="{x:Null}" />
+						<Button
+							BorderThickness="3"
+							ToolTip="Preset Background 1"
+							Content="3"
+							HorizontalAlignment="Left"
+							Margin="232,69,0,0"
+							VerticalAlignment="Top"
+							Width="104"
+							Height="57"
+							Foreground="#DDFFFFFF"
+							Background="{x:Null}" />
+						<Button
+							BorderThickness="3"
+							ToolTip="Preset Background 1"
+							Content="4"
+							HorizontalAlignment="Left"
+							Margin="14,131,0,0"
+							VerticalAlignment="Top"
+							Width="104"
+							Height="56"
+							Foreground="#DDFFFFFF"
+							Background="{x:Null}" />
+						<Button
+							BorderThickness="3"
+							ToolTip="Preset Background 1"
+							Content="5"
+							HorizontalAlignment="Left"
+							Margin="123,131,0,0"
+							VerticalAlignment="Top"
+							Width="104"
+							Height="56"
+							Foreground="#DDFFFFFF"
+							Background="{x:Null}" />
+						<Button
+							BorderThickness="3"
+							ToolTip="Preset Background 1"
+							Content="6"
+							HorizontalAlignment="Left"
+							Margin="232,131,0,0"
+							VerticalAlignment="Top"
+							Width="104"
+							Height="56"
+							Foreground="#DDFFFFFF"
+							Background="{x:Null}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Presets"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="111"
+							Height="35"
+							Margin="9,29,0,0" />
+						<Button
+							BorderThickness="3"
+							ToolTip="Custom Background Preview"
+							Content="Preview"
+							HorizontalAlignment="Left"
+							Margin="435,69,0,0"
+							VerticalAlignment="Top"
+							Width="242"
+							Height="118"
+							Foreground="#DD000000"
+							Background="{x:Null}" />
+						<Button
+							Content="..."
+							HorizontalAlignment="Left"
+							Margin="357,70,0,0"
+							VerticalAlignment="Top"
+							Width="73"
+							Foreground="#FFFFFFFF"
+							BorderBrush="{DynamicResource AccentColor}"
+							Background="#FF1F1D2B" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Custom"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="111"
+							Height="35"
+							Margin="435,29,0,0" />
+					</Grid>
+				</Border>
+				<Button
+					Name="btnBack2Color"
+					HorizontalAlignment="Left"
+					Margin="10,63,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:BootstrapIcons Kind=ArrowLeft}"
+					Click="btnBack2Color_Click" />
+			</Grid>
+		</Border>
+		<Image
+			HorizontalAlignment="Left"
+			Height="56"
+			Margin="13,69,0,0"
+			VerticalAlignment="Top"
+			Width="104"
+			Stretch="UniformToFill" />
+	</Grid>
+</UserControl>

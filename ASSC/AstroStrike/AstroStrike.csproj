@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A06847CD-CBA5-4DA2-AF06-4DB6CFCE42BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AstroStrike</RootNamespace>
+    <AssemblyName>AstroStrike</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>AstroStrike.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Discord\u0020Webhook">
+      <HintPath>..\..\Discord Webhook.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordRPC">
+      <HintPath>..\..\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Emoji.Wpf">
+      <HintPath>..\..\Emoji.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf">
+      <HintPath>..\..\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="MahApps.Metro.IconPacks.Fontaudio" />
+    <Reference Include="MahApps.Metro.IconPacks.Modern" />
+    <Reference Include="MahApps.Metro.IconPacks.RemixIcon" />
+    <Reference Include="MahApps.Metro.IconPacks.Material" />
+    <Reference Include="MahApps.Metro.IconPacks.Zondicons" />
+    <Reference Include="MahApps.Metro.IconPacks.Typicons" />
+    <Reference Include="MahApps.Metro.IconPacks.FeatherIcons" />
+    <Reference Include="MahApps.Metro.IconPacks" />
+    <Reference Include="MahApps.Metro.IconPacks.BootstrapIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.Codicons" />
+    <Reference Include="MahApps.Metro.IconPacks.PixelartIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.WeatherIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.MaterialLight" />
+    <Reference Include="MahApps.Metro.IconPacks.Octicons" />
+    <Reference Include="MahApps.Metro.IconPacks.Entypo" />
+    <Reference Include="MahApps.Metro.IconPacks.Unicons" />
+    <Reference Include="MahApps.Metro.IconPacks.Microns" />
+    <Reference Include="MahApps.Metro.IconPacks.Core" />
+    <Reference Include="MahApps.Metro.IconPacks.RadixIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.VaadinIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.FontAwesome" />
+    <Reference Include="MahApps.Metro.IconPacks.SimpleIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.FileIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.Ionicons" />
+    <Reference Include="MahApps.Metro.IconPacks.BoxIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.EvaIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.RPGAwesome" />
+    <Reference Include="MahApps.Metro.IconPacks.PicolIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.MaterialDesign" />
+    <Reference Include="MahApps.Metro.IconPacks.JamIcons" />
+    <Reference Include="MahApps.Metro.IconPacks.ForkAwesome" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands.cs" />
+    <Compile Include="Discord\Status.cs" />
+    <Compile Include="Discord\Ticket.cs" />
+    <Compile Include="Fusion\App.cs" />
+    <Compile Include="Fusion\AppBlob.cs" />
+    <Compile Include="Fusion\AppRoot.cs" />
+    <Compile Include="Fusion\ChatResponse.cs" />
+    <Compile Include="Fusion\ChatRoot.cs" />
+    <Compile Include="Fusion\FusionApp.cs" />
+    <Compile Include="Fusion\FusionResponse.cs" />
+    <Compile Include="Fusion\ManageMessageResponse.cs" />
+    <Compile Include="Fusion\MessageRoot.cs" />
+    <Compile Include="Fusion\User.cs" />
+    <Compile Include="Fusion\UserBlob.cs" />
+    <Compile Include="Fusion\UserLog.cs" />
+    <Compile Include="Fusion\UserRoot.cs" />
+    <Compile Include="Fusion\VarRoot.cs" />
+    <Compile Include="Helpers\Config.cs" />
+    <Compile Include="Helpers\Http.cs" />
+    <Compile Include="Helpers\Verify.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Attack.cs" />
+    <Compile Include="Modules\Commands.cs" />
+    <Compile Include="Modules\DiscordModules.cs" />
+    <Compile Include="Modules\EnemyLog.cs" />
+    <Compile Include="Modules\GeoLocation.cs" />
+    <Compile Include="Modules\HttpResponse.cs" />
+    <Compile Include="Modules\News.cs" />
+    <Compile Include="Modules\NewsModules.cs" />
+    <Compile Include="Modules\ServerInfo.cs" />
+    <Compile Include="Modules\UserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsManager.cs" />
+    <Compile Include="SettingsModel.cs" />
+    <Compile Include="User_Controls\Chat_Bubbles\ucReceivedBubble.cs" />
+    <Compile Include="User_Controls\Chat_Bubbles\ucSentBubble.cs" />
+    <Compile Include="User_Controls\News\ucDangerCard.cs" />
+    <Compile Include="User_Controls\News\ucInfoCard.cs" />
+    <Compile Include="User_Controls\News\ucSuccessCard.cs" />
+    <Compile Include="User_Controls\News\ucWarningCard.cs" />
+    <Compile Include="User_Controls\Notifications\MessageHost.cs" />
+    <Compile Include="User_Controls\Notifications\ucDangerPopup.cs" />
+    <Compile Include="User_Controls\Notifications\ucInfoPopup.cs" />
+    <Compile Include="User_Controls\Notifications\ucSuccessPopup.cs" />
+    <Compile Include="User_Controls\Notifications\ucWarningPopup.cs" />
+    <Compile Include="User_Controls\Support.cs" />
+    <Compile Include="User_Controls\ucChat.cs" />
+    <Compile Include="User_Controls\ucDashboard.cs" />
+    <Compile Include="User_Controls\ucEnemyLogger.cs" />
+    <Compile Include="User_Controls\ucHub.cs" />
+    <Compile Include="User_Controls\ucSettings.cs" />
+    <Compile Include="User_Controls\ucTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\chat bubbles\ucreceivedbubble.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\chat bubbles\ucsentbubble.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\news\ucdangercard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\news\ucinfocard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\news\ucsuccesscard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\news\ucwarningcard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\notifications\messagehost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\notifications\ucdangerpopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\notifications\ucinfopopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\notifications\ucsuccesspopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\notifications\ucwarningpopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\support.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\ucchat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\ucdashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\ucenemylogger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\uchub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\ucsettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user controls\uctools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo.ico" />
+    <Resource Include="logomi.png" />
+    <Resource Include="test.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

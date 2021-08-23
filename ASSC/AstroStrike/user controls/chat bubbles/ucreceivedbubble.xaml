@@ -1,0 +1,155 @@
+<UserControl
+	x:Class="AstroStrike.User_Controls.Chat_Bubbles.ucReceivedBubble" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:AstroStrike.User_Controls.Chat_Bubbles" xmlns:Custom="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+	Height="100">
+	<Grid>
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="80"
+			Margin="1,10,0,0"
+			VerticalAlignment="Top"
+			Width="650"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="80"
+				VerticalAlignment="Top"
+				Width="650">
+				<UIElement.Clip>
+					<RectangleGeometry
+						Rect="0,0,650,79"
+						RadiusX="15"
+						RadiusY="15" />
+				</UIElement.Clip>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="72"
+					Margin="496,-21,0,0"
+					VerticalAlignment="Top"
+					Width="30"
+					Background="#FFDADADA"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="20.122" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="72"
+					Margin="116,34,0,-27"
+					VerticalAlignment="Top"
+					Width="30"
+					Background="#FFDADADA"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="49.621" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="12"
+					Margin="7,30,0,0"
+					VerticalAlignment="Top"
+					Width="12"
+					Background="#FFDADADA"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="52.665" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Custom:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="ArrowDownCircle"
+						Foreground="#FFDADADA"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="62"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="571"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="62"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="571">
+						<Label
+							Name="lblTitle"
+							HorizontalContentAlignment="Left"
+							Content="Title"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="551"
+							Height="32"
+							Margin="6,0,0,0" />
+						<ScrollViewer
+							HorizontalAlignment="Left"
+							VerticalScrollBarVisibility="Hidden"
+							Height="31"
+							Margin="24,33,0,-2"
+							VerticalAlignment="Top"
+							Width="522">
+							<emoji:TextBlock
+								Name="tbMessage"
+								HorizontalAlignment="Left"
+								TextWrapping="Wrap"
+								Text="Message Content"
+								VerticalAlignment="Top"
+								Height="28"
+								Width="522"
+								Foreground="#FFFFFFFF"
+								FontSize="14"
+								FontFamily="Roboto Light" />
+						</ScrollViewer>
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

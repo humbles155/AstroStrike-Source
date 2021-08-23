@@ -1,0 +1,650 @@
+<UserControl
+	x:Class="AstroStrike.User_Controls.ucHub" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:AstroStrike.User_Controls" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+	<Grid>
+		<Label
+			Content="Attack Hub"
+			HorizontalAlignment="Left"
+			Margin="20,10,0,0"
+			VerticalAlignment="Top"
+			FontWeight="Bold"
+			FontFamily="Segoe UI Semibold"
+			FontSize="26"
+			Width="140"
+			Height="46" />
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="229"
+			Margin="564,61,0,0"
+			VerticalAlignment="Top"
+			Width="240"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="229"
+				VerticalAlignment="Top"
+				Width="240">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="212"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="220"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="212"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="220">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Response"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="219"
+							Height="35"
+							Margin="0,-1,0,0" />
+						<TextBlock
+							Name="APIResponse"
+							Text="N/a"
+							TextWrapping="Wrap"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontSize="13"
+							Width="207"
+							Height="172"
+							Margin="7,34,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+		<Border
+			Name="bGeoLocation"
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="271"
+			Margin="35,61,0,0"
+			VerticalAlignment="Top"
+			Width="524"
+			Background="#FF1F1D2B"
+			Visibility="Hidden">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="271"
+				VerticalAlignment="Top"
+				Width="524">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="Globe"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="251"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="445"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="251"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="445">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="GEO Location"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="445"
+							Height="35" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Country Name"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="148"
+							Height="35"
+							Margin="10,35,0,0" />
+						<Label
+							Name="country"
+							HorizontalContentAlignment="Right"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="272"
+							Height="35"
+							Margin="163,35,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Region Name"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="148"
+							Height="35"
+							Margin="10,70,0,0" />
+						<Label
+							Name="region"
+							HorizontalContentAlignment="Right"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="272"
+							Height="35"
+							Margin="163,70,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="City Name"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="148"
+							Height="35"
+							Margin="10,105,0,0" />
+						<Label
+							Name="city"
+							HorizontalContentAlignment="Right"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="272"
+							Height="35"
+							Margin="163,105,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Organization"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="148"
+							Height="35"
+							Margin="10,140,0,0" />
+						<Label
+							Name="org"
+							HorizontalContentAlignment="Right"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="272"
+							Height="35"
+							Margin="163,140,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Protected"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="148"
+							Height="35"
+							Margin="10,175,0,0" />
+						<Label
+							Name="_protected"
+							HorizontalContentAlignment="Right"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="272"
+							Height="35"
+							Margin="163,175,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Time Zone"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="148"
+							Height="35"
+							Margin="10,210,0,0" />
+						<Label
+							Name="timezone"
+							HorizontalContentAlignment="Right"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="272"
+							Height="35"
+							Margin="163,210,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+					</Grid>
+				</Border>
+				<Button
+					Name="btnBack2Hub"
+					ToolTip="Back"
+					HorizontalAlignment="Left"
+					Margin="10,63,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:BootstrapIcons Kind=ArrowLeftCircle}"
+					Click="btnBack2Hub_Click" />
+			</Grid>
+		</Border>
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="227"
+			Margin="35,337,0,0"
+			VerticalAlignment="Top"
+			Width="769"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="227"
+				VerticalAlignment="Top"
+				Width="769">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="CardList"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					ToolTip="Amount of attacks logged"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="33"
+					Margin="10,62,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Label
+						Name="countLBL"
+						Content="0"
+						ToolTip="Amount of attacks logged"
+						HorizontalContentAlignment="Center"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						FontWeight="Bold"
+						FontFamily="Segoe UI Semibold"
+						FontSize="17"
+						Width="52"
+						Height="32"
+						Foreground="#FFA2A2BD"
+						Margin="0,-1,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="207"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="690"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="207"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="690">
+						<DataGrid
+							Name="dgAttackHub"
+							Background="#FF252836"
+							ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+							ScrollViewer.VerticalScrollBarVisibility="Hidden"
+							ScrollViewer.CanContentScroll="True"
+							CanUserSortColumns="False"
+							CanUserReorderColumns="False"
+							CanUserResizeRows="False"
+							Foreground="{DynamicResource AccentColor}"
+							Margin="10">
+							<DataGrid.Columns>
+								<DataGridTextColumn
+									Header="Target"
+									Width="125"
+									Binding="{Binding Target, Mode=OneWay}"
+									ClipboardContentBinding="{x:Null}" />
+								<DataGridTextColumn
+									Header="Port"
+									Width="90"
+									Binding="{Binding Port, Mode=OneWay}"
+									ClipboardContentBinding="{x:Null}" />
+								<DataGridTextColumn
+									Header="Time"
+									Width="90"
+									Binding="{Binding Time, Mode=OneWay}"
+									ClipboardContentBinding="{x:Null}" />
+								<DataGridTextColumn
+									Header="Method"
+									Width="120"
+									Binding="{Binding Method, Mode=OneWay}"
+									ClipboardContentBinding="{x:Null}" />
+								<DataGridTextColumn
+									Header="Server"
+									Width="120"
+									Binding="{Binding Server, Mode=OneWay}"
+									ClipboardContentBinding="{x:Null}" />
+								<DataGridTemplateColumn
+									Header="Options"
+									Width="350"
+									ClipboardContentBinding="{x:Null}">
+									<DataGridTemplateColumn.CellTemplate>
+										<DataTemplate>
+											<StackPanel
+												Orientation="Horizontal">
+												<!--Unknown connection ID: 12-->
+												<Button
+													Name="btnPing"
+													ToolTip="Ping Host"
+													HorizontalAlignment="Left"
+													VerticalAlignment="Top"
+													Foreground="#FFFFFFFF"
+													Background="{DynamicResource AccentColor}"
+													BorderBrush="{x:Null}">
+													<materialDesign:PackIcon
+														Name="piPing"
+														Kind="WifiStar"
+														RenderTransformOrigin="0.506,-0.002"
+														Background="{DynamicResource AccentColor}" />
+												</Button>
+												<!--Unknown connection ID: 13-->
+												<Button
+													Name="btnAutoFill"
+													ToolTip="Auto Fill"
+													HorizontalAlignment="Left"
+													VerticalAlignment="Top"
+													Background="{DynamicResource AccentColor}"
+													Foreground="#FFFFFFFF"
+													BorderBrush="{x:Null}">
+													<materialDesign:PackIcon
+														Name="piFill"
+														Kind="ArrowUp"
+														RenderTransformOrigin="0.506,-0.002" />
+												</Button>
+											</StackPanel>
+										</DataTemplate>
+									</DataGridTemplateColumn.CellTemplate>
+								</DataGridTemplateColumn>
+							</DataGrid.Columns>
+						</DataGrid>
+					</Grid>
+				</Border>
+				<Button
+					Name="DeleteAllLogs"
+					ToolTip="Clear logs"
+					HorizontalAlignment="Left"
+					Margin="10,100,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:BootstrapIcons Kind=Trash}"
+					Click="DeleteAllLogs_Click" />
+			</Grid>
+		</Border>
+		<Border
+			Name="bTargetInfo"
+			Visibility="Visible"
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="271"
+			Margin="35,61,0,0"
+			VerticalAlignment="Top"
+			Width="524"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="271"
+				VerticalAlignment="Top"
+				Width="524">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="WifiOff"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="251"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="445"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="251"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="445">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Target Information "
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="17"
+							Width="445"
+							Height="35" />
+						<TextBox
+							Name="host"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="0.0.0.0"
+							ToolTip="Host"
+							Style="{DynamicResource MaterialDesignTextBox}"
+							Foreground="{DynamicResource AccentColor}"
+							Margin="10,32,10,170"
+							BorderBrush="#DD858585"
+							FontSize="20"
+							FontWeight="Bold"
+							SelectionBrush="#FFC1C1C1"
+							Background="{x:Null}" />
+						<TextBox
+							Name="port"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="80"
+							ToolTip="Port"
+							Style="{DynamicResource MaterialDesignTextBox}"
+							Foreground="{DynamicResource AccentColor}"
+							Margin="10,81,231,129"
+							BorderBrush="#DD858585"
+							FontSize="20"
+							FontWeight="Bold"
+							SelectionBrush="#FFC1C1C1"
+							Background="{x:Null}" />
+						<TextBox
+							Name="time"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="30"
+							ToolTip="Time"
+							Style="{DynamicResource MaterialDesignTextBox}"
+							Foreground="{DynamicResource AccentColor}"
+							Margin="231,81,10,129"
+							BorderBrush="#DD858585"
+							FontSize="20"
+							FontWeight="Bold"
+							SelectionBrush="#FFC1C1C1"
+							Background="{x:Null}" />
+						<ComboBox
+							Name="server"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="Server"
+							HorizontalAlignment="Left"
+							Margin="10,128,0,0"
+							VerticalAlignment="Top"
+							Width="425"
+							Height="38"
+							Foreground="{DynamicResource AccentColor}"
+							FontSize="18"
+							FontWeight="Bold"
+							BorderBrush="#DD858585"
+							DropDownClosed="server_DropDownClosed" />
+						<ComboBox
+							Name="method"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							materialDesign:HintAssist.Hint="Method"
+							HorizontalAlignment="Left"
+							Margin="10,171,0,0"
+							VerticalAlignment="Top"
+							Width="425"
+							Height="38"
+							Foreground="{DynamicResource AccentColor}"
+							FontSize="18"
+							FontWeight="Bold"
+							BorderBrush="#DD858585" />
+						<Button
+							Name="SendAttackBTN"
+							Content="Launch Attack"
+							HorizontalAlignment="Left"
+							Margin="10,212,0,0"
+							VerticalAlignment="Top"
+							Width="425"
+							Foreground="#FFFFFFFF"
+							BorderBrush="{DynamicResource AccentColor}"
+							Background="#FF1F1D2B"
+							Click="SendAttackBTN_Click" />
+					</Grid>
+				</Border>
+				<Button
+					Name="PingBTN"
+					ToolTip="Ping Host"
+					HorizontalAlignment="Left"
+					Margin="10,63,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:BootstrapIcons Kind=Reception3}"
+					Click="PingBTN_Click" />
+				<Button
+					Name="TCPBTN"
+					ToolTip="TCP Ping"
+					HorizontalAlignment="Left"
+					Margin="10,101,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:Material Kind=RadioTower}"
+					Click="TCPBTN_Click" />
+				<Button
+					Name="btnGEO"
+					ToolTip="GEO Location"
+					HorizontalAlignment="Left"
+					Margin="10,140,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					BorderBrush="#FF252836"
+					Foreground="#FFA2A2BD"
+					Opacity="0.8"
+					Content="{iconPacks:BootstrapIcons Kind=Globe}"
+					Click="btnGEO_Click" />
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

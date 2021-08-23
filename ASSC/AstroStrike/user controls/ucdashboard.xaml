@@ -1,0 +1,688 @@
+<UserControl
+	x:Class="AstroStrike.User_Controls.ucDashboard" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:user_controls="clr-namespace:AstroStrike.User_Controls">
+	<Grid>
+		<Label
+			Content="Dashboard"
+			HorizontalAlignment="Left"
+			Margin="20,10,0,0"
+			VerticalAlignment="Top"
+			FontWeight="Bold"
+			FontFamily="Segoe UI Semibold"
+			FontSize="26"
+			Width="140"
+			Height="46" />
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="89"
+			Margin="35,61,0,0"
+			VerticalAlignment="Top"
+			Width="240"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="89"
+				VerticalAlignment="Top"
+				Width="240">
+				<UIElement.Clip>
+					<RectangleGeometry
+						Rect="0,0,240,89"
+						RadiusX="15"
+						RadiusY="15" />
+				</UIElement.Clip>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="72"
+					Margin="198,-56,0,0"
+					VerticalAlignment="Top"
+					Width="30"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="20.122" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="72"
+					Margin="-29,22,0,-8"
+					VerticalAlignment="Top"
+					Width="30"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="49.621" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="12"
+					Margin="65,54,0,0"
+					VerticalAlignment="Top"
+					Width="12"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="52.665" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="PeopleFill"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="70"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="161"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="70"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="161">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Total Members"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="18"
+							Width="161"
+							Height="35" />
+						<Label
+							Name="TotalUsers"
+							HorizontalContentAlignment="Center"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="161"
+							Height="35"
+							Margin="0,35,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="89"
+			Margin="300,61,0,0"
+			VerticalAlignment="Top"
+			Width="240"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="89"
+				VerticalAlignment="Top"
+				Width="240">
+				<UIElement.Clip>
+					<RectangleGeometry
+						Rect="0,0,240,89"
+						RadiusX="15"
+						RadiusY="15" />
+				</UIElement.Clip>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="72"
+					Margin="237,-11,-27,0"
+					VerticalAlignment="Top"
+					Width="30"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="30.281" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="25"
+					Margin="48,17,0,0"
+					VerticalAlignment="Top"
+					Width="23"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="65.539" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="26"
+					Margin="144,79,0,-16"
+					VerticalAlignment="Top"
+					Width="33"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="52.665" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="HddFill"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="70"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="161"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="70"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="161">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="API Count"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="18"
+							Width="161"
+							Height="35" />
+						<Label
+							Name="ServersOnline"
+							HorizontalContentAlignment="Center"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="161"
+							Height="35"
+							Margin="0,35,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="89"
+			Margin="564,61,0,0"
+			VerticalAlignment="Top"
+			Width="240"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="89"
+				VerticalAlignment="Top"
+				Width="240">
+				<UIElement.Clip>
+					<RectangleGeometry
+						Rect="0,0,240,89"
+						RadiusX="15"
+						RadiusY="15" />
+				</UIElement.Clip>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="72"
+					Margin="176,-46,0,0"
+					VerticalAlignment="Top"
+					Width="30"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="30.281" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="27"
+					Margin="167,84,0,-22"
+					VerticalAlignment="Top"
+					Width="31"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="34.706" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					CornerRadius="45"
+					HorizontalAlignment="Left"
+					Height="26"
+					Margin="-23,9,0,0"
+					VerticalAlignment="Top"
+					Width="33"
+					Background="{DynamicResource AccentColor}"
+					Opacity="0.3"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform
+								Angle="52.665" />
+							<TranslateTransform />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="StarFill"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="70"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="161"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="70"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="161">
+						<Label
+							HorizontalContentAlignment="Center"
+							Content="Top Method"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="18"
+							Width="161"
+							Height="35" />
+						<Label
+							Name="TopMethod"
+							HorizontalContentAlignment="Center"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="161"
+							Height="35"
+							Margin="0,35,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+		<ScrollViewer
+			VerticalScrollBarVisibility="Visible"
+			HorizontalAlignment="Left"
+			Height="159"
+			Margin="35,164,0,0"
+			VerticalAlignment="Top"
+			Width="769">
+			<StackPanel
+				Name="newsHost"
+				Height="560"
+				Width="769" />
+		</ScrollViewer>
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="214"
+			Margin="35,332,0,0"
+			VerticalAlignment="Top"
+			Width="463"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="215"
+				VerticalAlignment="Top"
+				Width="463"
+				Margin="0,0,0,-43">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,10,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="PersonBadge"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="195"
+					Margin="69,10,0,0"
+					VerticalAlignment="Top"
+					Width="386"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Grid
+						HorizontalAlignment="Left"
+						Height="195"
+						Margin="-1"
+						VerticalAlignment="Top"
+						Width="386">
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Total Attacks"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="135"
+							Height="35"
+							Margin="8,150,0,0" />
+						<Label
+							Name="totalattacks"
+							HorizontalContentAlignment="Right"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="240"
+							Height="36"
+							Margin="139,148,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Membership"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="126"
+							Height="35"
+							Margin="8,1,0,0" />
+						<Label
+							Name="membership"
+							HorizontalContentAlignment="Right"
+							Content="N/a"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="240"
+							Height="36"
+							Margin="139,0,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Max Time"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="126"
+							Height="36"
+							Margin="8,38,0,0" />
+						<Label
+							Name="maxtime"
+							HorizontalContentAlignment="Right"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="240"
+							Height="36"
+							Margin="139,38,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Concurrents"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="126"
+							Height="36"
+							Margin="8,74,0,0" />
+						<Label
+							Name="cooldown"
+							HorizontalContentAlignment="Right"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="240"
+							Height="36"
+							Margin="139,111,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+						<Label
+							HorizontalContentAlignment="Left"
+							Content="Cooldown"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="126"
+							Height="36"
+							Margin="8,111,0,0" />
+						<Label
+							Name="conc"
+							HorizontalContentAlignment="Right"
+							Content="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Top"
+							FontWeight="Bold"
+							FontFamily="Segoe UI Semibold"
+							FontSize="20"
+							Width="240"
+							Height="36"
+							Margin="139,74,0,0"
+							Foreground="{DynamicResource AccentColor}" />
+					</Grid>
+				</Border>
+			</Grid>
+		</Border>
+		<Border
+			CornerRadius="10"
+			HorizontalAlignment="Left"
+			Height="214"
+			Margin="505,332,0,0"
+			VerticalAlignment="Top"
+			Width="301"
+			Background="#FF1F1D2B">
+			<Grid
+				HorizontalAlignment="Left"
+				Height="213"
+				VerticalAlignment="Top"
+				Width="301"
+				Margin="0,1,0,0">
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="48"
+					Margin="10,9,0,0"
+					VerticalAlignment="Top"
+					Width="54"
+					Background="#FF252836"
+					Opacity="0.8">
+					<iconPacks:PackIconBootstrapIcons
+						Height="28"
+						Width="34"
+						Kind="ChatDots"
+						Foreground="{DynamicResource AccentColor}"
+						Margin="9,9,0,0" />
+				</Border>
+				<Border
+					BorderBrush="#FF252836"
+					CornerRadius="5"
+					BorderThickness="1"
+					HorizontalAlignment="Left"
+					Height="197"
+					Margin="69,9,0,0"
+					VerticalAlignment="Top"
+					Width="222"
+					Background="#FF252836"
+					Opacity="0.8">
+					<Button
+						Name="OpenDiscordBTN"
+						Content="Discord"
+						HorizontalAlignment="Left"
+						Margin="9,54,0,0"
+						VerticalAlignment="Top"
+						Width="204"
+						Foreground="#FFFFFFFF"
+						BorderBrush="{DynamicResource AccentColor}"
+						Background="#FF1F1D2B"
+						Click="SendAttackBTN_Click" />
+				</Border>
+				<Label
+					Content="Stay Connected"
+					HorizontalContentAlignment="Center"
+					FontWeight="Bold"
+					FontFamily="Segoe UI Semibold"
+					FontSize="20"
+					Height="35"
+					Margin="70,8,11,170" />
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

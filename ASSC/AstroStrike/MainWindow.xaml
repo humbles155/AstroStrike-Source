@@ -1,0 +1,468 @@
+<Window
+	x:Class="AstroStrike.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:local="clr-namespace:AstroStrike"
+	Title="Astro Strike"
+	AllowsTransparency="True"
+	Height="616.5"
+	Width="1077.5"
+	ResizeMode="NoResize"
+	WindowStartupLocation="CenterScreen"
+	WindowStyle="None"
+	Icon="logomi.png"
+	Background="{x:Null}"
+	Foreground="{x:Null}">
+	<Border
+		CornerRadius="20"
+		Margin="0"
+		Background="#FF1F1D2B">
+		<Grid>
+			<Border
+				CornerRadius="10"
+				Margin="243,0,0,0"
+				Background="#FF252836"
+				MouseLeftButtonDown="Border_MouseLeftButtonDown">
+				<Grid
+					Name="tabDisplay"
+					HorizontalAlignment="Left"
+					Height="574"
+					VerticalAlignment="Top"
+					Width="835"
+					Margin="0,22,0,0" />
+			</Border>
+			<Ellipse
+				Margin="15,26,994,522"
+				materialDesign:ShadowAssist.ShadowDepth="Depth3"
+				StrokeThickness="3"
+				Stroke="{DynamicResource AccentColor}">
+				<Shape.Fill>
+					<ImageBrush
+						ImageSource="test.png"
+						x:Name="pic"
+						Stretch="UniformToFill" />
+				</Shape.Fill>
+			</Ellipse>
+			<Label
+				Name="username"
+				Content="Username"
+				HorizontalAlignment="Left"
+				Margin="91,31,0,0"
+				VerticalAlignment="Top"
+				FontWeight="Bold"
+				FontFamily="Segoe UI Semibold"
+				FontSize="18"
+				Width="144" />
+			<Label
+				Name="plan"
+				Content="N/a"
+				HorizontalAlignment="Left"
+				Margin="90,56,0,0"
+				VerticalAlignment="Top"
+				FontFamily="Segoe UI Semibold"
+				Foreground="#FF5E5D66"
+				FontSize="16"
+				Width="150" />
+			<Button
+				Name="btnSettings"
+				ToolTip="Settings"
+				HorizontalAlignment="Left"
+				Margin="161,107,0,0"
+				VerticalAlignment="Top"
+				Width="66"
+				Background="#FF252836"
+				BorderBrush="#FF252836"
+				Foreground="#FFA2A2BD"
+				Opacity="0.8"
+				Content="{materialDesign:PackIcon Kind=Cog, Size=14}"
+				Click="btnSettings_Click" />
+			<Label
+				Content="Menu"
+				HorizontalAlignment="Left"
+				Margin="14,156,0,0"
+				VerticalAlignment="Top"
+				FontFamily="Segoe UI Semibold"
+				Foreground="#FF5E5D66"
+				FontSize="16"
+				Width="52" />
+			<Grid
+				HorizontalAlignment="Left"
+				Height="407"
+				Margin="0,181,0,0"
+				VerticalAlignment="Top"
+				Width="243">
+				<StackPanel
+					HorizontalAlignment="Left"
+					Height="406"
+					VerticalAlignment="Top"
+					Width="243"
+					Margin="0,11,0,-10">
+					<Border
+						Name="bDashboard"
+						CornerRadius="6"
+						HorizontalAlignment="Left"
+						Height="53"
+						VerticalAlignment="Top"
+						Width="233"
+						Background="#FF252836">
+						<Grid>
+							<Border
+								CornerRadius="10"
+								BorderThickness="1"
+								HorizontalAlignment="Left"
+								Height="35"
+								Margin="17,9,0,0"
+								VerticalAlignment="Top"
+								Width="38"
+								Background="{DynamicResource AccentColor}"
+								Opacity="0.8">
+								<iconPacks:PackIconBootstrapIcons
+									Height="15"
+									Width="38"
+									Kind="HouseDoorFill"
+									Foreground="#FFFFFFFF"
+									Margin="-1,9,-1,0" />
+							</Border>
+							<Label
+								Content="Dashboard"
+								VerticalContentAlignment="Center"
+								HorizontalAlignment="Left"
+								Margin="60,8,0,0"
+								VerticalAlignment="Top"
+								FontFamily="Segoe UI Semibold"
+								Foreground="#FF7F7E85"
+								FontSize="16"
+								Width="173"
+								Height="35" />
+							<GridSplitter
+								Name="gsDashboard"
+								HorizontalAlignment="Left"
+								Height="53"
+								VerticalAlignment="Top"
+								Width="5"
+								Background="{DynamicResource AccentColor}" />
+							<Button
+								Name="btnDashboard"
+								materialDesign:RippleAssist.IsDisabled="True"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								Width="233"
+								Height="53"
+								Background="{x:Null}"
+								BorderBrush="{x:Null}"
+								Click="TabChange" />
+						</Grid>
+					</Border>
+					<Border
+						Name="bHub"
+						CornerRadius="6"
+						HorizontalAlignment="Left"
+						Height="53"
+						VerticalAlignment="Top"
+						Width="233"
+						Margin="0,0,0,0">
+						<Grid>
+							<Border
+								CornerRadius="10"
+								BorderThickness="1"
+								HorizontalAlignment="Left"
+								Height="35"
+								Margin="17,9,0,0"
+								VerticalAlignment="Top"
+								Width="38"
+								Background="{DynamicResource AccentColor}"
+								Opacity="0.8">
+								<iconPacks:PackIconBootstrapIcons
+									Height="15"
+									Width="38"
+									Kind="WifiOff"
+									Foreground="#FFFFFFFF"
+									Margin="-1,9,-1,0" />
+							</Border>
+							<Label
+								Content="Attack Hub"
+								VerticalContentAlignment="Center"
+								HorizontalAlignment="Left"
+								Margin="60,8,0,0"
+								VerticalAlignment="Top"
+								FontFamily="Segoe UI Semibold"
+								Foreground="#FF7F7E85"
+								FontSize="16"
+								Width="173"
+								Height="35" />
+							<GridSplitter
+								Name="gsHub"
+								HorizontalAlignment="Left"
+								Height="53"
+								VerticalAlignment="Top"
+								Width="5"
+								Background="{DynamicResource AccentColor}"
+								Visibility="Hidden" />
+							<Button
+								Name="btnHub"
+								materialDesign:RippleAssist.IsDisabled="True"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								Width="233"
+								Height="53"
+								Background="{x:Null}"
+								BorderBrush="{x:Null}"
+								Click="TabChange" />
+						</Grid>
+					</Border>
+					<Border
+						Name="bTools"
+						CornerRadius="6"
+						HorizontalAlignment="Left"
+						Height="53"
+						VerticalAlignment="Top"
+						Width="233"
+						Margin="0,0,0,0">
+						<Grid>
+							<Border
+								CornerRadius="10"
+								BorderThickness="1"
+								HorizontalAlignment="Left"
+								Height="35"
+								Margin="17,9,0,0"
+								VerticalAlignment="Top"
+								Width="38"
+								Background="{DynamicResource AccentColor}"
+								Opacity="0.8">
+								<iconPacks:PackIconBootstrapIcons
+									Height="17"
+									Width="38"
+									Kind="Wrench"
+									Foreground="#FFFFFFFF"
+									Margin="-1,8,-1,0" />
+							</Border>
+							<Label
+								Content="Extra Tools"
+								VerticalContentAlignment="Center"
+								HorizontalAlignment="Left"
+								Margin="60,8,0,0"
+								VerticalAlignment="Top"
+								FontFamily="Segoe UI Semibold"
+								Foreground="#FF7F7E85"
+								FontSize="16"
+								Width="173"
+								Height="35" />
+							<GridSplitter
+								Name="gsTools"
+								HorizontalAlignment="Left"
+								Height="53"
+								VerticalAlignment="Top"
+								Width="5"
+								Background="{DynamicResource AccentColor}"
+								Visibility="Hidden" />
+							<Button
+								Name="btnTools"
+								materialDesign:RippleAssist.IsDisabled="True"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								Width="233"
+								Height="53"
+								Background="{x:Null}"
+								BorderBrush="{x:Null}"
+								Click="TabChange" />
+						</Grid>
+					</Border>
+					<Border
+						Name="bEnemyLogger"
+						CornerRadius="6"
+						HorizontalAlignment="Left"
+						Height="53"
+						VerticalAlignment="Top"
+						Width="233"
+						Margin="0,0,0,0">
+						<Grid>
+							<Border
+								CornerRadius="10"
+								BorderThickness="1"
+								HorizontalAlignment="Left"
+								Height="35"
+								Margin="17,9,0,0"
+								VerticalAlignment="Top"
+								Width="38"
+								Background="{DynamicResource AccentColor}"
+								Opacity="0.8">
+								<iconPacks:PackIconBootstrapIcons
+									Height="15"
+									Width="38"
+									Kind="PersonBoundingBox"
+									Foreground="#FFFFFFFF"
+									Margin="-1,9,-1,0" />
+							</Border>
+							<Label
+								Content="Enemy Logs"
+								VerticalContentAlignment="Center"
+								HorizontalAlignment="Left"
+								Margin="60,8,0,0"
+								VerticalAlignment="Top"
+								FontFamily="Segoe UI Semibold"
+								Foreground="#FF7F7E85"
+								FontSize="16"
+								Width="173"
+								Height="35" />
+							<GridSplitter
+								Name="gsEnemyLogger"
+								HorizontalAlignment="Left"
+								Height="53"
+								VerticalAlignment="Top"
+								Width="5"
+								Background="{DynamicResource AccentColor}"
+								Visibility="Hidden" />
+							<Button
+								Name="btnEnemyLogger"
+								materialDesign:RippleAssist.IsDisabled="True"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								Width="233"
+								Height="53"
+								Background="{x:Null}"
+								BorderBrush="{x:Null}"
+								Click="TabChange" />
+						</Grid>
+					</Border>
+					<Border
+						Name="bChat"
+						CornerRadius="6"
+						HorizontalAlignment="Left"
+						Height="53"
+						VerticalAlignment="Top"
+						Width="233"
+						Margin="0,0,0,0">
+						<Grid>
+							<Border
+								CornerRadius="10"
+								BorderThickness="1"
+								HorizontalAlignment="Left"
+								Height="35"
+								Margin="17,9,0,0"
+								VerticalAlignment="Top"
+								Width="38"
+								Background="{DynamicResource AccentColor}"
+								Opacity="0.8">
+								<iconPacks:PackIconBootstrapIcons
+									Height="15"
+									Width="38"
+									Kind="ChatText"
+									Foreground="#FFFFFFFF"
+									Margin="-1,9,-1,0" />
+							</Border>
+							<Label
+								Content="Live Chat"
+								VerticalContentAlignment="Center"
+								HorizontalAlignment="Left"
+								Margin="60,8,0,0"
+								VerticalAlignment="Top"
+								FontFamily="Segoe UI Semibold"
+								Foreground="#FF7F7E85"
+								FontSize="16"
+								Width="173"
+								Height="35" />
+							<GridSplitter
+								Name="gsChat"
+								HorizontalAlignment="Left"
+								Height="53"
+								VerticalAlignment="Top"
+								Width="5"
+								Background="{DynamicResource AccentColor}"
+								Visibility="Hidden" />
+							<Button
+								Name="btnChat"
+								materialDesign:RippleAssist.IsDisabled="True"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								Width="233"
+								Height="53"
+								Background="{x:Null}"
+								BorderBrush="{x:Null}"
+								Click="TabChange" />
+						</Grid>
+					</Border>
+					<Border
+						Name="bSupport"
+						CornerRadius="6"
+						HorizontalAlignment="Left"
+						Height="53"
+						VerticalAlignment="Top"
+						Width="233"
+						Margin="0,0,0,0">
+						<Grid>
+							<Border
+								CornerRadius="10"
+								BorderThickness="1"
+								HorizontalAlignment="Left"
+								Height="35"
+								Margin="17,9,0,0"
+								VerticalAlignment="Top"
+								Width="38"
+								Background="{DynamicResource AccentColor}"
+								Opacity="0.8">
+								<iconPacks:PackIconBootstrapIcons
+									Height="15"
+									Width="38"
+									Kind="Question"
+									Foreground="#FFFFFFFF"
+									Margin="-1,9,-1,0" />
+							</Border>
+							<Label
+								Content="Support"
+								VerticalContentAlignment="Center"
+								HorizontalAlignment="Left"
+								Margin="60,8,0,0"
+								VerticalAlignment="Top"
+								FontFamily="Segoe UI Semibold"
+								Foreground="#FF7F7E85"
+								FontSize="16"
+								Width="173"
+								Height="35" />
+							<GridSplitter
+								Name="gsSupport"
+								HorizontalAlignment="Left"
+								Height="53"
+								VerticalAlignment="Top"
+								Width="5"
+								Background="{DynamicResource AccentColor}"
+								Visibility="Hidden" />
+							<Button
+								Name="btnSupport"
+								materialDesign:RippleAssist.IsDisabled="True"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								Width="233"
+								Height="53"
+								Background="{x:Null}"
+								BorderBrush="{x:Null}"
+								Click="TabChange" />
+						</Grid>
+					</Border>
+				</StackPanel>
+			</Grid>
+			<Button
+				Name="MiniBTN"
+				ToolTip="Minimize"
+				HorizontalAlignment="Left"
+				Margin="18,107,0,0"
+				VerticalAlignment="Top"
+				Width="66"
+				Background="#FF252836"
+				BorderBrush="#FF252836"
+				Foreground="#FFA2A2BD"
+				Opacity="0.8"
+				Content="{iconPacks:BootstrapIcons Kind=EyeSlashFill}"
+				Click="MiniBTN_Click" />
+			<Button
+				Name="ExitBTN"
+				ToolTip="Exit"
+				HorizontalAlignment="Left"
+				Margin="90,107,0,0"
+				VerticalAlignment="Top"
+				Width="66"
+				Background="#FF252836"
+				BorderBrush="#FF252836"
+				Foreground="#FFA2A2BD"
+				Opacity="0.8"
+				Content="{iconPacks:BootstrapIcons Kind=BoxArrowInRight}"
+				Click="ExitBTN_Click" />
+		</Grid>
+	</Border>
+</Window>
