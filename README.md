@@ -1,2 +1,2 @@
 # AstroStrike-Source
-These dog shit kids scammed me so I cracked all of there shit so enjoy lmao
+some kid called mini hood released this so i thought i'd archive it
